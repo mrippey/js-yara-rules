@@ -1039,7 +1039,7 @@ rule apt_CN_Tetrisplugins_JS
 		)
 }
 
-rule WordPress_Obfs_Script
+rule WordPress_Obfs_JS
 {
 
     meta:
@@ -1052,9 +1052,9 @@ rule WordPress_Obfs_Script
     
    	$s1="eval" nocase fullword
 	$s2="String.fromCharCode" nocase fullword
-	$s3="102, 117, 110, 99"
-	$s4="97, 121, 40, 41, 59"
+	$s3="{102, 117, 110, 99}"
+	$s4="{97, 121, 40, 41, 59}"
 	
     condition:
-    filesize < 100KB and all of them
+    filesize < 10KB and all of them
 }
