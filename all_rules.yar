@@ -955,6 +955,24 @@ rule apt_CN_Tetris_JS_advanced_2
 
 }
 
+rule WordPress_Obfs_JS
+{
+
+    meta:
+       author = "Michael Rippey"
+       date_created = "06/05/2022"
+       license = "GNU GPLv3"
+       license_reference = "https://choosealicense.com/licenses/gpl-3.0/"
+
+    strings:
+    
+   	$s1 = "eval" 
+	$s2 = "String.fromCharCode"
+
+	
+    condition:
+    filesize < 10KB and all of them
+}
 rule apt_CN_Tetrisplugins_JS    
 {
 	meta:
@@ -1039,21 +1057,3 @@ rule apt_CN_Tetrisplugins_JS
 		)
 }
 
-rule WordPress_Obfs_JS
-{
-
-    meta:
-       author = "Michael Rippey"
-       info = "clip.js?v=1.17 06/05/22"
-       license = "GNU GPLv3"
-       license_reference = "https://choosealicense.com/licenses/gpl-3.0/"
-
-    strings:
-    
-   	$s1="eval" 
-	$s2="String.fromCharCode"
-
-	
-    condition:
-    filesize < 10KB and all of them
-}
