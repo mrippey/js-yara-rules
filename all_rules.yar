@@ -1050,8 +1050,8 @@ rule WordPress_Obfs_JS
 
     strings:
     
-   	$s1="eval" nocase fullword
-	$s2="String.fromCharCode" nocase fullword
+   	$s1="eval" 
+	$s2="String.fromCharCode"
 
 	
     condition:
