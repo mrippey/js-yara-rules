@@ -1044,7 +1044,7 @@ rule WordPress_Obfs_JS
 
     meta:
        author = "Michael Rippey"
-       info = " clip.js?v=1.17, special.js?v=1.4.3 06/05/22 "
+       info = "clip.js?v=1.17 06/05/22"
        license = "GNU GPLv3"
        license_reference = "https://choosealicense.com/licenses/gpl-3.0/"
 
@@ -1052,8 +1052,7 @@ rule WordPress_Obfs_JS
     
    	$s1="eval" nocase fullword
 	$s2="String.fromCharCode" nocase fullword
-	$s3="{102, 117, 110, 99}"
-	$s4="{97, 121, 40, 41, 59}"
+
 	
     condition:
     filesize < 10KB and all of them
